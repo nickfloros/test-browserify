@@ -42,6 +42,8 @@ module.exports = function(grunt) {
 				{
 					src : ['src/app/**/*.html'],
 					dest : 'dist/partials/',
+					flatten : true,
+					expand : true,
 					filter:'isFile'
 				},
 				{

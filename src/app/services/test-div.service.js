@@ -15,4 +15,4 @@ function testDivService() {
 }
 
 angular.module('test-div-service-module',[]).
-	service(testDivService);
+	service('testDivService',testDivService);
