@@ -8,7 +8,7 @@ function testDivService() {
 		_version='1.0';
 
 	_.extend(svc,{
-		version : function(val) {
+		version : function versionAccessor(val) {
 			return arguments.length>0?_version=val:_version;
 		}
 	});

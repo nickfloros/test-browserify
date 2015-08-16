@@ -48,10 +48,11 @@ module.exports = function(grunt) {
 				},
 				{
 					src:['node_modules/bootstrap/dist/css/bootstrap.css',
+							 'node_modules/bootstrap/dist/css/bootstrap-theme.css',
 					'node_modules/angular-hotkeys/build/hotkeys.css'],
 					flatten:true,
 					expand:true,
-					dest : 'dist/style/',
+					dest : 'dist/styles/',
 					filter : 'isFile'
 				},
 				{

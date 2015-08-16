@@ -1,22 +1,18 @@
 'use strict';
 
 require('angular');
-require('angular-ui-bootstrap');
 require('../../services/test-div.service');
 
 var _=require('lodash');
 
 function testDivController(testSvc) {
-	var ctrl = this;
-
+	var ctrl = this,
+		_tmp = testSvc;
 	_.extend(ctrl, {
-		testItem : function testItemAccessor(val) {
-			console.log(val);
-			return testSvc.version(val);
-		}
+		testItem : _tmp.version
 	});
 }
 
-angular.module('test-div-controller-module',['ui.bootstrap','test-div-service-module'])
+angular.module('test-div-controller-module',['test-div-service-module'])
 .controller('testDivController',['testDivService',testDivController]);
 
